@@ -31,6 +31,7 @@ export default {
   ** Global CSS
   */
   css: [
+	  '~/assets/global.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -66,7 +67,14 @@ export default {
   ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+	customVariables: ['~/assets/variables.scss'],
+	defautAssets: {
+		font: true,
+		icons: 'mdi',
+	},
+	icons: {
+		iconfont: 'mdi'
+	},
     theme: {
       dark: true,
       themes: {
@@ -87,5 +95,13 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-  }
+  },
+
+  /**
+   * Page transition config
+   */
+  pageTransition: {
+	  name: 'page',
+	  mode: 'out-in'
+  },
 }
