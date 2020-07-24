@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@mdi/font": "^5.3.45",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/vuetify": "^1.11.2",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",

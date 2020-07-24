@@ -1,28 +1,20 @@
 <template>
     <v-app>
         <app-container>
-            <hgroup class="text-center mb-14">
+            <hgroup class="text-center mb-14 mt-5">
                 <h1 class="text-h2 mb-3">Eventos</h1>
                 <h2 class="text-h5">
                     Confira os próximos eventos da comunidade
                 </h2>
             </hgroup>
-            <v-container fluid>
-                <v-row>
-                    <v-col xl="4" v-for="i in 4" :key="i">
-						<AppCard />
-                    </v-col>
-                </v-row>
-            </v-container>
+			<nuxt-child />
         </app-container>
     </v-app>
 </template>
 
 <script>
 export default {
-    name: 'Eventos',
-    scrollToTop: true,
+    name: 'EventosIndex',
+	scrollToTop: true,
 }
 </script>
-
-<style lang="scss" scoped></style>
