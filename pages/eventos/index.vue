@@ -1,20 +1,48 @@
 <template>
-	<v-container fluid>
-		<v-row>
-			<v-col xl="4" v-for="i in 4" :key="i">
-				<AppCard title="" :event-id="i" />
+    <v-container fluid>
+        <v-row>
+            <v-col v-if="getIsLoading">
+                <v-overlay opacity="0" z-index="0">
+                    <v-progress-circular
+                        indeterminate
+                        size="64"
+						color="#1482CC"
+                    />
+                </v-overlay>
+            </v-col>
+            <v-col xl="4" v-for="event in getSymplaEvents" :key="event.id" v-else>
+				<v-lazy>
+					<AppCard 
+						:eventId="event.id"
+						:name="event.name"
+						:startDate="event.start_date"
+						:image="event.image"
+						:address="event.address"
+					/>
+				</v-lazy>
 			</v-col>
-		</v-row>
-	</v-container>
+        </v-row>
+    </v-container>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
     name: 'EventHome',
     scrollToTop: true,
-    created() {
-        this.$api.getEvents().then((response) => console.table(response.data))
-    },
+    data() {
+        return {
+			events: [],
+			isLoading: true,
+        }
+	},
+    beforeCreate() {
+		this.$store.dispatch('sympla/fetchSymplaEvents');
+	},
+	computed: {
+		...mapGetters("sympla", ['getSymplaEvents', 'getIsLoading'])
+	}
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
 	<v-app>
 		<app-navbar />
-		<v-app class="pt-13">
+		<v-app class="pt-10">
 			<nuxt />
 		</v-app>
 	</v-app>

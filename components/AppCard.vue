@@ -3,14 +3,15 @@
         <v-img
             class="white--text align-end"
             height="200px"
-            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+            :src="image"
         >
-            <v-card-title>Top 10 Australian beaches</v-card-title>
+            <v-card-title>{{ name }}</v-card-title>
         </v-img>
-        <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>
+        <v-card-subtitle class="pb-0">{{ startDate }}</v-card-subtitle>
         <v-card-text class="text--primary">
-            <div>Whitehaven Beach</div>
-            <div>Whitsunday Island, Whitsunday Islands</div>
+            <div>{{ address.address }} {{ address.address_num }} {{ address.address_alt ? `, ${address.address_alt}` : '' }}</div>
+            <div>{{ address.neighborhood }}, {{ address.city }}</div>
+			<div>CEP: {{ address.zip_code }}</div>
         </v-card-text>
         <v-card-actions>
             <v-btn :color="defaultColor" tile block nuxt :to="`/eventos/${eventId}`">
@@ -33,7 +34,25 @@ export default {
 		},
 		eventId: {
 			type: Number,
+			required: true
+		},
+		name: {
+			type: String,
+			required: true
+		},
+		startDate: {
+			type: String,
+			required: true
+		},
+		image: {
+			type: String,
+			required: true
+		},
+		address: {
+			type: Object,
+			required: true
 		}
+
     },
 }
 </script>

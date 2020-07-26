@@ -38,7 +38,8 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-	  '~/plugins/api.js'
+	  '~/plugins/api.js',
+	  '~/plugins/timeParser.js'
   ],
   /*
   ** Auto import components
@@ -108,4 +109,9 @@ export default {
 	  name: 'page',
 	  mode: 'out-in'
   },
+
+  loading: {
+	  color: "#1482CC",
+	  height: '3px'
+  }
 }
