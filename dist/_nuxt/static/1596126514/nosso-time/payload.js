@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/nosso-time", {data:[{}],fetch:[],mutations:[]});
