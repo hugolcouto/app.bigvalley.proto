@@ -1,6 +1,8 @@
 import axios from 'axios';
 
 export const api = {
-	getEvents: () => axios.get(`${process.env.API_URL_SYMPLA}/sympla`),
-	getSingleEvent: id => axios.get(`${process.env.API_URL_SYMPLA}/events/${id}`)
+	getEvents: () => axios.get(`${process.env.SYMPLA_API_URL}/sympla`),
+	getSingleEvent: id => axios.get(`${process.env.SYMPLA_API_URL}/events/${id}`)
 }
+
+console.log('TESTE', process.env.SYMPLA_API_URL)
