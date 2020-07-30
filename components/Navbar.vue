@@ -16,7 +16,7 @@
 		</v-app-bar>
 		<v-navigation-drawer v-model="drawer" fixed>
 			<v-list nav dense>
-				<v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
+				<v-list-item-group active-class="deep-purple--text text--accent-4">
 					<v-btn block nuxt tile depressed active-class="current" text color="#fff" to="/" exact>Home</v-btn>
 					<v-btn block nuxt tile depressed active-class="current" text color="#fff" to="/eventos">Eventos</v-btn>
 					<v-btn block nuxt tile depressed active-class="current" text color="#fff" to="/nosso-time">Nosso time</v-btn>
