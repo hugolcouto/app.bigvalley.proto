@@ -7,7 +7,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "export": "nuxt export",
-    "serve": "nuxt serve",
+	"serve": "nuxt serve",
+	"generate": "nuxt generate",
     "db:sympla": "json-server mock/sympla.json -p 2112"
   },
   "dependencies": {
