@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/startups-parceiras", {data:[{}],fetch:[],mutations:[]});
