@@ -125,9 +125,7 @@
                                         v-else
                                         :eventId="getSymplaEvents[0].id"
                                         :name="getSymplaEvents[0].name"
-                                        :startDate="
-                                            getSymplaEvents[0].start_date
-                                        "
+                                        :startDate="getSymplaEvents[0].start_date"
                                         :image="getSymplaEvents[0].image"
                                         :address="getSymplaEvents[0].address"
                                     />
@@ -170,7 +168,10 @@ export default {
     },
     beforeCreate() {
         this.$store.dispatch('sympla/fetchSymplaEvents')
-    },
+	},
+	mounted() {
+		// this.$date(getSymplaEvents[0].start_date);
+	},
     computed: {
         ...mapGetters('sympla', ['getSymplaEvents', 'getIsLoading']),
     },

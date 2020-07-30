@@ -8,33 +8,33 @@
             </v-col>
         </v-row>
         <v-row>
-            <v-col md="8" v-if="isLoading">
-                <v-skeleton-loader tile type="text" width="500" height="40" />
+            <v-col md="8" cols="12" v-if="isLoading">
+                <v-skeleton-loader tile type="text" width="100%" height="40" />
                 <v-skeleton-loader
                     tile
                     type="text"
-                    width="500"
+                    width="90"
                     height="24"
                     class="mt-5"
                 />
                 <v-skeleton-loader
                     tile
                     type="text"
-                    width="500"
+                    width="80"
                     height="24"
                     class="mt-3"
                 />
                 <v-skeleton-loader
                     tile
                     type="text"
-                    width="500"
+                    width="50%"
                     height="24"
                     class="mt-3"
                 />
                 <v-skeleton-loader
                     tile
                     type="text"
-                    width="500"
+                    width="50%"
                     height="24"
                     class="mt-3"
                 />
@@ -42,12 +42,12 @@
                 <v-skeleton-loader
                     tile
                     type="text"
-                    width="500"
+                    width="100%"
                     height="24"
                     class="d-block"
                 />
             </v-col>
-            <v-col md="8" v-else>
+            <v-col md="8" cols="12" v-else>
                 <h1 class="text-h4">{{ event.name }}</h1>
                 <span class="d-flex mt-5"
                     ><v-icon class="mr-2">mdi-calendar</v-icon>
@@ -68,7 +68,7 @@
                 <v-spacer class="my-15" />
                 <article v-html="event.detail" />
             </v-col>
-            <v-col v-if="isLoading" md="4">
+            <v-col v-if="isLoading" md="4" cols="12">
                 <v-layout column>
                     <v-skeleton-loader
                         tile
@@ -85,7 +85,7 @@
                     />
                 </v-layout>
             </v-col>
-            <v-col md="4" v-else>
+            <v-col md="4" cols="12" v-else>
                 <v-layout column>
                     <v-tooltip bottom>
                         <template v-slot:activator="{ on, attrs }">
