@@ -1,97 +1,185 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-  </v-layout>
+    <v-app>
+        <v-parallax
+            dark
+            src="https://imagens.ebc.com.br/QyZHtMFDYEAk1V58RH-aG_CQb30=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/angra_dos_reis_3.jpg?itok=mZjwoTaT"
+        >
+            <v-container>
+                <v-row align="center" justify="center">
+                    <v-col class="text-center">
+                        <h1 class="text-h2 mb-3">
+                            Bem-vindos à Comunidade Big Valley
+                        </h1>
+                        <h2 class="text-h5 mb-5">
+                            A comunidade de tecnologia e inovação da Baía da
+                            Ilha Grande
+                        </h2>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-parallax>
+        <app-container class="pt-12">
+            <v-lazy>
+                <v-container fluid class="mb-12">
+                    <v-row>
+                        <v-col xs="12" md="6">
+                            <h1 class="text-h4 text-center mb-8">
+                                O que é a Big Valley
+                            </h1>
+                            <div class="d-md-none align-center">
+                                <img
+                                    src="~/assets/images/Collaboration-amico.svg"
+                                    alt=""
+                                    width="100%"
+                                />
+                            </div>
+                            <article>
+                                <p>
+                                    Somos a Comunidade Aberta de
+                                    Empreendedorismo e Inovação. Ações
+                                    Inovadoras é o que nos move, espírito
+                                    empreendor é o que nos define.
+                                </p>
+                                <p>
+                                    Acreditamos na força das idéias e na união
+                                    entre as pessoas para mudar o mundo.
+                                </p>
+                                <p>
+                                    Nascemos para pensar no todo e desenvolver
+                                    potencialidades. Onde ideias virem negócios
+                                    e projetos gerem soluções.
+                                </p>
+                                <p>
+                                    Se você comunga de nossas ideias e quer
+                                    construir um mundo melhor, venha somar com a
+                                    gente. Acreditamos num futruro brilhante e
+                                    vamos trabalhar pra isso.
+                                </p>
+                                <br />
+                                <p>
+                                    Somos uma Comunidade de Inovação, com
+                                    objetivo de fomentar nosso ecossistema de
+                                    negócios em Angra dos Reis e toda Costa
+                                    Verde e Bahia da Ilha Grande. De Paraty a
+                                    Mangaratiba.
+                                </p>
+                                <br />
+                                <p>
+                                    Nossa Missão é Desenvolver pessoas capazes
+                                    de gerar impacto na comunidade, através de
+                                    ações imovaodras e empreendedorasl.
+                                </p>
+                            </article>
+                        </v-col>
+                        <v-col xs="12" md="6" class="d-none d-md-block">
+                            <div class="gravure d-flex align-center">
+                                <img
+                                    src="~/assets/images/Collaboration-amico.svg"
+                                    alt=""
+                                    width="100%"
+                                />
+                            </div>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </v-lazy>
+            <v-lazy>
+                <v-container fluid>
+                    <v-row>
+                        <v-col xs="12" md="6" class="d-none d-md-block">
+                            <div class="gravure d-flex align-center">
+                                <img
+                                    src="~/assets/images/Calendar-pana.svg"
+                                    alt=""
+                                    width="100%"
+                                />
+                            </div>
+                        </v-col>
+                        <v-col xs="12" md="6">
+                            <h1 class="text-h4 text-center mb-8">Eventos</h1>
+                            <div class="d-md-none align-center">
+                                <img
+                                    src="~/assets/images/Calendar-pana.svg"
+                                    alt=""
+                                    width="100%"
+                                />
+                            </div>
+                            <article>
+                                <p>
+                                    Somos a Comunidade Aberta de
+                                    Empreendedorismo e Inovação. Ações
+                                    Inovadoras é o que nos move, espírito
+                                    empreendor é o que nos define.
+                                </p>
+                                <div class="my-6">
+                                    <h5 class="text-h5 mb-3">Próximo evento</h5>
+                                    <v-skeleton-loader
+                                        v-if="getIsLoading"
+                                        ref="skeleton"
+                                        type="card"
+                                        tile
+                                        class="mx-auto"
+                                        min-height="350"
+                                    ></v-skeleton-loader>
+                                    <AppCard
+                                        v-else
+                                        :eventId="getSymplaEvents[0].id"
+                                        :name="getSymplaEvents[0].name"
+                                        :startDate="getSymplaEvents[0].start_date"
+                                        :image="getSymplaEvents[0].image"
+                                        :address="getSymplaEvents[0].address"
+                                    />
+                                </div>
+                                <div class="d-flex justify-center">
+                                    <v-btn
+                                        tile
+                                        text
+                                        nuxt
+                                        to="/eventos"
+                                        class="center"
+                                        :color="defaultColor"
+                                        >Ver todos os eventos</v-btn
+                                    >
+                                </div>
+                            </article>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </v-lazy>
+        </app-container>
+    </v-app>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import AppContainer from '~/components/AppContainer'
+import { mapGetters } from 'vuex'
 
 export default {
-  components: {
-    Logo,
-    VuetifyLogo
-  }
+    name: 'Home',
+    scrollToTop: true,
+    data() {
+        return {}
+    },
+    props: {
+        defaultColor: {
+            type: String,
+            default: '#1482CC',
+        },
+    },
+    beforeCreate() {
+        this.$store.dispatch('sympla/fetchSymplaEvents')
+	},
+	mounted() {
+		// this.$date(getSymplaEvents[0].start_date);
+	},
+    computed: {
+        ...mapGetters('sympla', ['getSymplaEvents', 'getIsLoading']),
+    },
 }
 </script>
+
+<style lang="scss" scoped>
+.gravure {
+    height: 100%;
+}
+</style>

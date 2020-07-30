@@ -7,16 +7,22 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "export": "nuxt export",
-    "serve": "nuxt serve"
+	"serve": "nuxt serve",
+	"generate": "nuxt generate",
+    "db:sympla": "json-server mock/sympla.json -p 2112"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
+    "@nuxtjs/redirect-module": "^0.3.1",
     "nuxt": "^2.13.0"
   },
   "devDependencies": {
+    "@mdi/font": "^5.3.45",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/vuetify": "^1.11.2",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "font-awesome": "4.7.0",
     "prettier": "^2.0.5"
   }
 }

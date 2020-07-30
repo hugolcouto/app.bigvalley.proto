@@ -1,5 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-
+require('dotenv').config()
 export default {
   /*
   ** Nuxt rendering mode
@@ -31,12 +31,15 @@ export default {
   ** Global CSS
   */
   css: [
+	  '~/assets/global.scss'
   ],
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+	  '~/plugins/api.js',
+	  '~/plugins/timeParser.js'
   ],
   /*
   ** Auto import components
@@ -47,7 +50,10 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/vuetify',
+	'@nuxtjs/vuetify',
+	['@nuxtjs/dotenv', {
+		filename: '.env'
+	}]
   ],
   /*
   ** Nuxt.js modules
@@ -66,7 +72,14 @@ export default {
   ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+	customVariables: ['~/assets/variables.scss'],
+	defautAssets: {
+		font: true,
+		icons: 'mdi',
+	},
+	icons: {
+		iconfont: 'mdi'
+	},
     theme: {
       dark: true,
       themes: {
@@ -87,5 +100,18 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+
+  /**
+   * Page transition config
+   */
+  pageTransition: {
+	  name: 'page',
+	  mode: 'out-in'
+  },
+
+  loading: {
+	  color: "#1482CC",
+	  height: '3px'
   }
 }
