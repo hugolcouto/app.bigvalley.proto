@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/", {data:[{}],fetch:[],mutations:[["sympla\u002FFETCH_SYMPLA_LOADING",true]]});
