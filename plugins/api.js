@@ -1,8 +1,15 @@
 import axios from 'axios';
 
-export const api = {
-	getEvents: () => axios.get(`${process.env.NUXT_ENV_SYMPLA_API_URL}/sympla`),
-	getSingleEvent: id => axios.get(`${process.env.NUXT_ENV_SYMPLA_API_URL}/events/${id}`)
-}
+const defaultApi = axios.create({
+	baseURL: process.env.NUXT_ENV_SYMPLA_API_URL,
+	timeout: 15000,
+	headers: {
+		's_token': process.env.NUXT_ENV_SYMPLA_S_TOKEN,
+		'Accept': 'application/json'
+	}
+})
 
-console.log("TESTE:", process.env.NUXT_ENV_SYMPLA_API_URL)
+export const api = {
+	getEvents: () => defaultApi.get('/events'),
+	getSingleEvent: id => defaultApi.get(`/events/${id}`)
+}

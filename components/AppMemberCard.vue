@@ -16,7 +16,7 @@
                     </v-btn>
                 </v-card-actions>
                 <v-card-title class="justify-center">
-                    Hugo Couto
+                    Lorem Ipsum
                 </v-card-title>
                 <v-card-text class="text-center">
                     Desenvolvedor web front-end na empresa Webhub
