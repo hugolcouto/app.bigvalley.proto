@@ -132,11 +132,10 @@ export default {
         this.isLoading = true
 		api.getSingleEvent(this.$route.params.id)
 			.then((response) => {
-				console.log(response.data)
-				this.event = response.data
-				this.address = response.data.address
-				this.parsedDate = this.$date(response.data.start_date)
-				this.parsedTime = this.$time(response.data.start_date)
+				this.event = response.data[0]
+				this.address = response.data[0].address
+				this.parsedDate = this.$date(response.data[0].start_date)
+				this.parsedTime = this.$time(response.data[0].start_date)
 				this.isLoading = false
 			})
 			.catch(err => {
