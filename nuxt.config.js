@@ -1,5 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
+import { api } from './plugins/api'
+
 export default {
   /*
   ** Nuxt rendering mode
@@ -113,5 +115,15 @@ export default {
   loading: {
 	  color: "#1482CC",
 	  height: '3px'
+  },
+
+  generate: {
+	  routes() {
+		return api.getEvents().then(response => {
+			return response.data.data.map(i => {
+				return `/eventos/${i.id}`
+			})
+		})
+	  }
   }
 }
