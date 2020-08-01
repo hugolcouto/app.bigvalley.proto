@@ -9,7 +9,8 @@
     "export": "nuxt export",
 	"serve": "nuxt serve",
 	"generate": "nuxt generate",
-    "db:sympla": "json-server mock/sympla.json -p 2112"
+	"db:sympla": "json-server mock/sympla.json -p 2112",
+	"heroku-postbuild": "yarn run build"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
