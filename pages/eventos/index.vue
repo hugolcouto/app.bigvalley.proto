@@ -6,43 +6,54 @@
                     <v-progress-circular
                         indeterminate
                         size="64"
-						color="#1482CC"
+                        :color="defaultColor"
                     />
                 </v-overlay>
             </v-col>
-            <v-col xl="4" v-for="event in getSymplaEvents" :key="event.id" v-else>
-				<v-lazy>
-					<AppCard 
-						:eventId="event.id"
-						:name="event.name"
-						:startDate="event.start_date"
-						:image="event.image"
-						:address="event.address"
-					/>
-				</v-lazy>
-			</v-col>
+            <v-col
+                xl="4"
+                v-for="event in getSymplaEvents"
+                :key="event.id"
+                v-else
+            >
+                <v-lazy>
+                    <AppCard
+                        :eventId="event.id"
+                        :name="event.name"
+                        :startDate="event.start_date"
+                        :image="event.image"
+                        :address="event.address"
+                    />
+                </v-lazy>
+            </v-col>
         </v-row>
     </v-container>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex'
 
 export default {
     name: 'EventHome',
     scrollToTop: true,
     data() {
         return {
-			events: [],
-			isLoading: true,
+            events: [],
+            isLoading: true,
         }
-	},
+    },
+    props: {
+        defaultColor: {
+            type: String,
+            default: '#1482CC',
+        },
+    },
     beforeCreate() {
-		this.$store.dispatch('sympla/fetchSymplaEvents');
-	},
-	computed: {
-		...mapGetters("sympla", ['getSymplaEvents', 'getIsLoading'])
-	}
+        this.$store.dispatch('sympla/fetchSymplaEvents')
+    },
+    computed: {
+        ...mapGetters('sympla', ['getSymplaEvents', 'getIsLoading']),
+    },
 }
 </script>
 

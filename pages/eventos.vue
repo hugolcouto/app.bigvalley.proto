@@ -7,7 +7,7 @@
                     Confira os próximos eventos da comunidade
                 </h2>
             </hgroup>
-			<nuxt-child />
+            <nuxt-child />
         </app-container>
     </v-app>
 </template>
@@ -15,6 +15,6 @@
 <script>
 export default {
     name: 'EventosIndex',
-	scrollToTop: true,
+    scrollToTop: true,
 }
 </script>
