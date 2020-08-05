@@ -96,7 +96,7 @@
                                 target="_blank"
                                 block
                                 tile
-                                color="#1482CC"
+                                :color="defaultColor"
                                 class="mb-5"
                             >
                                 Inscrever-se
@@ -128,22 +128,28 @@ export default {
             parsedTime: '',
         }
     },
+    props: {
+        defaultColor: {
+            type: String,
+            default: '#1482CC',
+        },
+    },
     beforeMount() {
         this.isLoading = true
-		api.getSingleEvent(this.$route.params.id)
-			.then((response) => {
-				this.event = response.data[0]
-				this.address = response.data[0].address
-				this.parsedDate = this.$date(response.data[0].start_date)
-				this.parsedTime = this.$time(response.data[0].start_date)
-				this.isLoading = false
-			})
-			.catch(err => {
-				if(err.response.status === 404) {
-					return this.$router.push('/404')
-				}
-			})
-	},
+        api.getSingleEvent(this.$route.params.id)
+            .then((response) => {
+                this.event = response.data[0]
+                this.address = response.data[0].address
+                this.parsedDate = this.$date(response.data[0].start_date)
+                this.parsedTime = this.$time(response.data[0].start_date)
+                this.isLoading = false
+            })
+            .catch((err) => {
+                if (err.response.status === 404) {
+                    return this.$router.push('/404')
+                }
+            })
+    },
 }
 </script>
 

@@ -1,15 +1,16 @@
 # app.bigvalley.proto
 
-Desenvolvimento do site da comunidade Big Valley
-
+Desenvolvimento de um protótipo de site da comunidade Big Valley
 
 ## Descrição
+
 O projeto do site Big Valley visa focar em algumas premissas, como:
-* SEO
-* Acessibilidade
-* Velocidade
-* Tecnologia
-* Simplicidade
+
+-   SEO
+-   Acessibilidade
+-   Velocidade
+-   Tecnologia
+-   Simplicidade
 
 Trata-se de um site simples com foco no conteúdo.
 
@@ -19,8 +20,19 @@ Desenvolvido utilizando a tecnologia Nuxt JS (Vue) para renderização em servid
 
 ## Instruções
 
-Após a clonagem do repositório, o projeto deverá ser instalado utilizando o comando ```yarn install``` ou ```npm install```.
+Para a utilização da aplicação em ambiente local, deverá seguir as seguintes etapas para a inicialização da aplicação:
 
-O front deverá ser iniciado com o comando ```yarn dev``` ou ```npm run dev```.
+1. Comando `yarn` ou `npm install` para instalação das dependências necessárias
+2. Comando `cp .env.example .env` para cópia do arquivo de variáveis com exeplos da API
+3. Comando `yarn dev`ou `npm run dev` para inicializar o projeto em ambiente local
 
-Para utilizar o mockup da api do Sympla, que utiliza dados fictícios da API de eventos (localizdos no arquivo ```mock/sympla.json```), deverá instalar o pacote global Json Server utilizando o comando ```yarn add global json-server``` ou ```npm i -g json-server```. Após sua instalação, rodar o comando ```yarn db:sympla``` ou ```npm run db:sympla```. O serviço será iniciado na porta 2112.
+Tanto a aplicação em ambiente de homologação quanto o mockup que simula a aplicação da API de eventos do Sympla estão hospedados no Heroku. Por esse motivo, possivelmente levará certo tempo para seus funcionamentos corretos na primeira chamada dentro de um determinado prazo. Resumindo: terá lentidão quando tentar abrir o site da primeira vez (mas depois funciona de forma normal).
+
+<hr />
+
+Tecnologias utilizadas nessa aplicação para consulta de documentação
+
+[Vue](https://vuejs.org/)  
+[Nuxt](https://nuxtjs.org/)  
+[Vuetify](https://vuetifyjs.com/)  
+[vuex](https://vuex.vuejs.org/)

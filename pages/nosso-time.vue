@@ -9,9 +9,9 @@
             </hgroup>
             <v-container>
                 <v-row>
-					<v-col v-for="i in 6" :key="i" md="4" >
-						<app-member-card />
-					</v-col>
+                    <v-col v-for="i in 6" :key="i" md="4">
+                        <app-member-card />
+                    </v-col>
                 </v-row>
             </v-container>
         </app-container>
